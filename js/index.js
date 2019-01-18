@@ -69,7 +69,7 @@ var mouseY = 0;
 var polX;
 var polY;
 
-var fail = new Audio('fail.wav');
+var fail = new Audio('fail.mp3');
 var success = new Audio('success.wav');
 
 
@@ -137,7 +137,7 @@ function cliked(){
 		
     }
     else{
-    	var fail = new Audio('fail.wav');
+    	var fail = new Audio('fail.mp3');
 
     	fail.play();
 
