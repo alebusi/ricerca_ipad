@@ -90,7 +90,7 @@ function generateVariables (){
 	diametro_costruzione_cerchio = 35; // grandezza cerchio centrale
 	rotazione = Math.PI/lati; // rotazione del poligono, "Math.PI/lati" serve per tenere le facce ortogonali alla finestra, "Math.random() *Math.PI*2" per una rotazione random
 	
-	colore_poligono= "FFFFFF";
+	colore_poligono= "#FFFFFF";
 	colore_cerchio = "#FF3300";  // blu "#0000E0";  //"#FF3300";
 
 	pos_x =((Math.random() * 100) + 1 )/100; // posizione x e y random del poligono
