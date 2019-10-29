@@ -132,11 +132,12 @@ function cliked(){
     if(distanceBtw < diametro_costruzione_poligono*0.6){
     	generateVariables();
     	drawCanvas(mouseX ,mouseY);
-    	success.play();
+    	/* success.play(); */
 		
     }
     else{
-    	fail.play();		
+	zz=1
+    	/* fail.play();	*/	
     }
     
 }
