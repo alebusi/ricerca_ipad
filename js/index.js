@@ -85,8 +85,8 @@ function generateVariables (){
 	// genero le variabili ogni volta che devo disegnare un poligono nuovo
 
 	targhet_canvas_id = "pageCanvas"; // il canvas in cui vogliamo disegnare
-	lati = 4; //getRandomInt(1, 4) ; // numro dei lati del poligono, se x < 3 verra diasegnato un cerchio, per una selezone random usare "getRandomInt(1, 8)"
-	diametro_costruzione_poligono = 75; // grandezza poligono 
+	lati = getRandomInt(2, 4) ; // numero dei lati del poligono, se x < 3 verra disegnato un cerchio, per una selezone random usare "getRandomInt(1, 8)"
+	diametro_costruzione_poligono = 150; // grandezza poligono 
 	diametro_costruzione_cerchio = 35; // grandezza cerchio centrale
 	rotazione = Math.PI/lati; // rotazione del poligono, "Math.PI/lati" serve per tenere le facce ortogonali alla finestra, "Math.random() *Math.PI*2" per una rotazione random
 	
@@ -220,13 +220,15 @@ function drawPoligon(targhet_canvas_id ,pos_x,pos_y , n_faces, outer_diameter, r
 	
 	if (percent_pos){
 		// calcolo la posizione del poligono proporzionalmente alla dimensione del canvas pos_x e pos_y vanno da 0 a 1 (0.5 è il centro della pagina)
+                pos_x = clamp (pos_x, 0.2, 0.75);
+		pos_y = clamp (pos_y, 0.2, 0.75);
 		pos_x = clamp (targhet_canvas.width * pos_x, outer_diameter/2,targhet_canvas.width-(outer_diameter/2) );
 		pos_y = clamp (targhet_canvas.height * pos_y, outer_diameter/2,targhet_canvas.height-(outer_diameter/2) );
 
 	}
 
 	if (storePos) {
-		//save the positions of the poligon to ceck against the mouse
+		//save the positions of the poligon to check against the mouse
 		polX = pos_x;
 		polY = pos_y;
 
